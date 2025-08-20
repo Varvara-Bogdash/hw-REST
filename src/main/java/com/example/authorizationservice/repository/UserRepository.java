@@ -1,4 +1,7 @@
-package ru.netology;
+package com.example.authorizationservice.repository;
+
+import com.example.authorizationservice.model.Authorities;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,7 +16,7 @@ public class UserRepository {
         } else if ("user".equals(user) && "user123".equals(password)) {
             return Arrays.asList(Authorities.READ);
         } else if ("guest".equals(user) && "guest123".equals(password)) {
-            return new ArrayList<Authorities>();
+            return new ArrayList<>();
         }
         return null;
     }
